@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Mobile</title>
+
+  <!-- reset css cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/bf10c4ec2a.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/style.css" />
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <div id="header">
+        <ul class="head_main">
+          <i class="fa-brands fa-youtube"></i>
+          <a href="#">Youtube</a>
+        </ul>
+
+        <ul class="head_icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </ul>
+      </div>
+    </header>
+
+    <!-- VIDEO PLAYER -->
+    <section class="player">
+      <video autoplay controls src="./video/video.mp4"></video>
+    </section>
+
+    <!-- VIDEO INFO -->
+    <section class="info">
+
+      <div class="metadata">
+
+        <ul class="hashtags">
+          <li>#Spain</li>
+          <li>#Barcelona</li>
+          <li>#Eunbin</li>
+        </ul>
+
+        <div class="titleAndButton">
+          <span class="title">
+            Spain Vlog: 나의 혼자 첫 여행 우당탕탕 Spain Barcelona 5박 8일 여행 로그 | 버스킹 힐링, 추러스 맛집, 꿀대구, 벙커, 바르셀로네타 해변, 자전거타며 일몰,
+            인종차별? 스냅사진 촬영
+          </span>
+          <button class="moreBtn">
+            <i class="fa-sharp fa-solid fa-caret-down"></i>
+          </button>
+        </div>
+
+        <div class="views">
+          <span class="views">1M views 1 month ago</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <ul class="actions">
+          <li><button><i class="fa-solid fa-thumbs-up"></i><span>1K</span></button></li>
+          <li><button><i class="fa-solid fa-thumbs-down"></i><span>0</span></button></li>
+          <li><button><i class="fa-solid fa-share"></i><span>Share</span></button></li>
+          <li><button><i class="fa-solid fa-plus"></i><span>Save</span></button></li>
+          <li><button><i class="fa-solid fa-flag"></i><span>Report</span></button></li>
+        </ul>
+      </div>
+
+      <div class="channel">
+        <div class="metadata">
+          <img src="./img/avatar.jpg" alt="" />
+          <div class="channel_info">
+            <span class="name">이은빈</span>
+            <span class="subscribers">1M subscribers</span>
+          </div>
+        </div>
+        <button class="subscribe">
+          SUBSCRIBE
+        </button>
+      </div>
+    </section>
+
+    <!-- UPNEXT -->
+    <section class="upNext">
+      <span class="title">Up next</span>
+      <ul>
+        <li class="item">
+          <img src="./img/1.jpg" alt="1" />
+          <div class="info">
+            <span class="title">
+              경주 여행 브이로그 | 2박 3일 경주 가족 여행 코스 완벽 정리! 가을 힐링 여행 제대로다 (통일전, 월정교, 대릉원, 불국사)
+            </span>
+            <span class="name">이은빈</span>
+            <span class="views">82K views</span>
+          </div>
+          <div class="moreBtn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </li>
+
+        <li class="item">
+          <img src="./img/2.jpg" alt="2" />
+          <div class="info">
+            <span class="title">
+              가을 브이로그 | 가을 숨겨진 단풍 명소 추천! 사람 없지만 예쁜 장소 찾고 싶다면? 드라이브와 함께 가을 힐링 명소
+            </span>
+            <span class="name">이은빈</span>
+            <span class="views">82K views</span>
+          </div>
+          <div class="moreBtn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </li>
+
+        <li class="item">
+          <img src="./img/3.jpg" alt="3" />
+          <div class="info">
+            <span class="title">
+              바르셀로나 브이로그 part2 | 가우디 투어 day! 가우디 투어 여행사 추천 (반일 코스 vs 전일 코스) 가우디 투어 날 꿀팁 대방출
+            </span>
+            <span class="name">이은빈</span>
+            <span class="views">82K views</span>
+          </div>
+          <div class="moreBtn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+
+</html>
