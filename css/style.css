@@ -1,14 +1,37 @@
 /* COMMON */
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #f00;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* size */
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
 html,
+body {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  background-color: #fcfcfc;
 }
 
 .container {
-  background-color: #fcfcfc;
+  background-color: var(--white-color);
 }
 
 a {
@@ -17,47 +40,33 @@ a {
 
 /* HEADER */
 header {
-  background-color: #212121;
+  background-color: var(--black-color);
 }
 
 header #header {
   width: 1200px;
   margin: 0 auto;
-  background-color: #212121;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 10px;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
 }
 
 header #header .head_main {
-  display: flex;
-  align-items: center;
+  font-size: var(--font-large);
 }
 
 header #header .head_main .fa-youtube {
-  color: #d50000;
-  font-size: 30px;
-  padding-right: 8px;
+  color: var(--red-color);
 }
 
 header #header .head_main a {
-  color: #fcfcfc;
-  font-weight: bold;
-  font-size: 20px;
+  color: var(--white-color);
 }
 
-header #header .head_icon {}
-
-header #header .head_icon i {
-  color: #fff;
-  font-size: 20px;
-}
-
-header #header .head_icon .fa-magnifying-glass {}
-
-header #header .head_icon .fa-ellipsis-vertical {
-  padding-left: 3px;
+header #header .head_icon .fa-magnifying-glass {
+  margin-right: var(--padding);
 }
 
 /* VIDEO PLAYER */
