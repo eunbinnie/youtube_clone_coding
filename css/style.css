@@ -19,23 +19,32 @@
   --font-micro: 10px;
 }
 
-html,
-body {
+* {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.4;
 }
 
 .container {
   background-color: var(--white-color);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
+}
+
+button,
+button:hover {
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 /* HEADER */
@@ -71,20 +80,24 @@ header #header .head_icon .fa-magnifying-glass {
 
 /* VIDEO PLAYER */
 .player {
-  background-color: #fcfcfc;
+  /* position: sticky;
+  top: 0; */
+  background-color: var(--black-color);
+  text-align: center;
 }
 
 .player video {
-  display: block;
-  width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
 }
 
 /* VIDEO INFO */
 .info {
-  width: 1200px;
+  padding: var(--padding);
+  width: 100%;
   margin: 0 auto;
-  background-color: #fcfcfc;
+  background-color: var(--white-color);
 }
 
 .info .metadata {
@@ -93,12 +106,13 @@ header #header .head_icon .fa-magnifying-glass {
 
 .info .metadata .hashtags {
   display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
   padding-bottom: 5px;
 }
 
 .info .metadata .hashtags li {
-  margin-right: 10px;
-  color: #01579b;
+  margin-right: var(--padding);
 }
 
 .info .metadata .titleAndButton {
@@ -108,20 +122,24 @@ header #header .head_icon .fa-magnifying-glass {
 }
 
 .info .metadata .titleAndButton .title {
-  font-size: 20px;
+  font-size: var(--font-medium);
   font-weight: bold;
-  margin-right: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .info .metadata .titleAndButton .moreBtn {
   border: none;
-  background-color: #fcfcfc;
+  background-color: var(--white-color);
   align-self: flex-start;
 }
 
 .info .metadata .views {
   margin: 10px 0;
   color: #9e9e9e;
+  font-size: var(--font-micro);
 }
 
 .info .actions {}
@@ -134,9 +152,8 @@ header #header .head_icon .fa-magnifying-glass {
 
 .info .actions ul li button {
   margin: 20px 0;
-  font-size: 20px;
   border: none;
-  background-color: #fcfcfc;
+  background-color: var(--white-color);
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -146,10 +163,7 @@ header #header .head_icon .fa-magnifying-glass {
 .info .actions ul li button span {
   align-self: center;
   margin: 8px;
-}
-
-.info .actions ul li button span {
-  font-size: 14px;
+  font-size: var(--font-small);
 }
 
 .info .channel {
@@ -184,70 +198,80 @@ header #header .head_icon .fa-magnifying-glass {
 }
 
 .info .channel .metadata .channel_info .name {
-  font-size: 20px;
+  font-size: var(--font-medium);
   font-weight: bold;
   padding-bottom: 5px;
 }
 
 .info .channel .metadata .channel_info .subscribers {
-  font-size: 14px;
+  font-size: var(--font-micro);
   color: #9e9e9e;
 }
 
 .info .channel .subscribe {
   border: none;
-  background-color: #fcfcfc;
+  background-color: var(--white-color);
   display: block;
   color: #424242;
-  font-size: 14px;
+  font-size: var(--font-micro);
   font-weight: bold;
 }
 
 /* UPNEXT */
 .upNext {
-  background-color: #fcfcfc;
-  width: 1200px;
+  background-color: var(--white-color);
+  width: 100%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 var(--padding);
 }
 
-.upNext span.title {
-  color: #424242;
+.upNext>span.title {
+  color: var(--grey-dark-color);
+  font-size: var(--font-medium);
 }
 
 .upNext ul {
-  margin: 10px 10px;
+  margin: var(--padding);
 }
 
-.upNext ul li {
+.upNext ul .item {
   display: flex;
   margin: 20px 0;
-  justify-content: space-between;
 }
 
-.upNext ul li img {
+.upNext ul .item img {
+  flex: 1 1 35%;
   height: 100px;
-  margin-right: 10px;
+  margin-right: var(--padding);
   align-self: center;
 }
 
-.upNext ul li .info {
+.upNext ul .item .img img {
+  /* width: 100%; */
+  margin-right: var(--padding);
+}
+
+.upNext ul .item .next_info {
+  flex: 1 1 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-right: 30px;
 }
 
-.upNext ul li .info .title {
-  font-size: 18px;
+.upNext ul .item .next_info .title {
+  font-size: var(--font-small);
   font-weight: 700;
+  align-self: flex-start;
+  padding-bottom: 7px;
 }
 
-.upNext ul li .info .name,
-.upNext ul li .info .views {
-  color: #9e9e9e;
+.upNext ul .item .next_info .name,
+.upNext ul .item .next_info .views {
+  color: var(--grey-dark-color);
+  font-size: var(--font-micro);
 }
 
-.upNext ul li .moreBtn {}
+.upNext ul .item>.moreBtn {}
 
 .upNext ul li .moreBtn i {}
